@@ -15,16 +15,13 @@ body {
   background-color: #021027;
   margin:0;
   padding:0;
-  background-image: url("https://www.millenniumparkconcerts.org/wp-content/uploads/2015/07/music-concert.jpg"); 
-  /* background-image: url("https://heartofthecity.co.nz/sites/default/files/styles/social_media/public/2020-02/Concert.jpg?itok=kAgS43Y_"); */
-  /* background-image: url("https://lh3.googleusercontent.com/proxy/h_fQHxvPDdzs79fqSQM5VN4u24CYgv9nPqWjTtbeDt1Nd3xc2XEvzBAh-Ro3Ut89Jy7KuOqfqbuXhmN4kS0dVaiDp84OP2i22Q55JQG1Jft1S4l65A"); */
+  background-image: url("https://scontent.fdel24-1.fna.fbcdn.net/v/t1.0-9/90263385_3562589627146392_6927914834088427520_o.jpg?_nc_cat=111&_nc_sid=cdbe9c&_nc_ohc=8J6r45-FMXYAX-qca1R&_nc_ht=scontent.fdel24-1.fna&oh=5d76431489992145756b3b39bd28bc9b&oe=5FB4ACDC");
   background-size:cover;
   background-repeat: no-repeat;
   background-color: #040f45;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   font-family:'Bad Script',cursive;
 }
 
@@ -33,7 +30,7 @@ h1
     margin:0;
     padding:0;
     color:#fff;
-    font-size: 14em;
+    font-size: 14vw;
 }
 h1 span
 {
@@ -85,7 +82,7 @@ h1 span:nth-child(10)
 }
 .text{
   position: fixed;
-  bottom: 350px;
+  bottom: auto;
 }
 @keyframes animate
 {
