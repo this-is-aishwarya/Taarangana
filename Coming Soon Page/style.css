@@ -82,7 +82,7 @@ h1 span:nth-child(10)
 }
 .text{
   position: fixed;
-  bottom: auto;
+  bottom: 55%;
 }
 @keyframes animate
 {
