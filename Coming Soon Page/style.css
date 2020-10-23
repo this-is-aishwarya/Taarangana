@@ -30,7 +30,7 @@ h1
     margin:0;
     padding:0;
     color:#fff;
-    font-size: 14vw;
+    font-size: 14.5vw;
 }
 h1 span
 {
@@ -82,7 +82,7 @@ h1 span:nth-child(10)
 }
 .text{
   position: fixed;
-  bottom: 50%;
+  bottom: 47%;
 }
 @keyframes animate
 {
