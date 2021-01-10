@@ -1,0 +1,291 @@
+/**
+ * Parallax styles
+ *
+ * All aesthetic styles are at the bottom for the benefit of better understanding the demo.
+ */
+html {
+  /* Give our document a fake height for demo purposes. */
+	height: 1500px;
+  /* We must set out root `font-size` to 0 to prevent our parallax margins being calculated */
+  font-size: 0;
+	}
+
+body {
+  /* Reset the `font-size` to 16px/1em/100% */
+  font-size: 16px;
+	height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fix our parallax elements in position */
+.parallax {
+	position: fixed;
+	}
+
+/**
+ * Position our elements
+ *
+ * Firstly we set our element position using `top`, `right`, `bottom`, `left`, then set your parallax movement using `margin` and `rem`.
+ *
+ * In this demo our 'base factor' is 50 (see JavaScript). Our 'factor' calculation never exceeds this number (when the viewport is fully scrolled), which means our `rem` calculations are based on this number.
+ *
+ * Example:
+ *
+ * If I set my `top` to `200px` and want this element to shift up by `400px`, our `rem` value is 400/10, or `-40em` (using negative margins to shift upwards).
+ */
+h1 {
+	top: 75px;
+	margin-top: -3rem;
+	z-index: 5;
+}
+
+.box {
+	top: -1400px;
+  /* Positive margin, so it appears from above */
+	margin-top: 29rem;
+  /* Center and pad */
+  left: 50%;
+  margin-left: -27%;
+	padding: 2%;
+	width: 50%;
+}
+
+.btn {
+  top: 5em;
+  right: -800px;
+  margin-right: 18.5rem;
+}
+
+.skyline {
+	top: 140px;
+	margin-top: -28rem;
+	/* left: 8%; */
+}
+
+.blimp {
+	top: 220px;
+	margin-top: -55rem;
+	/* left: 24%; */
+}
+
+.gherkin {
+	top: 100px;
+	margin-top: -20rem;
+	/* left: 40%; */
+	z-index: 10;
+}
+
+.bull {
+	top: 360px;
+	margin-top: -47rem;
+	left: 56%;
+}
+
+.dino {
+	top: 260px;
+	margin-top: -33rem;
+	left: 72%;
+}
+
+
+/**
+ * Demo aesthetics
+ */
+
+html {
+	background: #113636 url('https://goo.gl/5wJBu') 50% 50%;
+	background-attachment: fixed;
+	background-size: cover;
+  font-family: sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+	color: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+a:hover {
+  color: magenta;
+}
+
+h1 {
+  width: 100%;
+  font: 3em/1 'Oswald', sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  margin: 0 0 1.5em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+img {
+	width: 20%;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+code {
+  background-color: #222;
+  color: magenta;
+}
+
+.box {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 0;
+}
+
+.container {
+  position: relative;
+  width: 29em;
+  transition: transform 2s ease;
+}
+
+.container:hover .front {
+  transform: rotateY(-180deg);
+  z-index: 0;
+}
+
+.container:hover .back {
+  transform: rotateY(0deg);
+}
+
+.container > div {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  border-radius: 24px;
+  text-align: center;
+  transition: transform 2s ease;
+  justify-content: space-evenly;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  backface-visibility: hidden;
+}
+
+.front {
+  position: relative;
+  padding: 3em 5em;
+  z-index: 1;
+  background: url(https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+}
+
+.front > *,
+.back > * {
+  transform: translateZ(100px);
+  transition: transform 0.3s ease;
+}
+
+.title {
+  position: relative;
+}
+
+.title:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 50%;
+  height: 4px;
+  border-radius: 2px;
+  background: #00ff5a;
+  transform: translateX(-50%);
+}
+
+.description {
+  margin-top: 1.5em;
+  display: block;
+  line-height: 150%;
+	position: relative;
+}
+
+.back {
+  top: 0;
+  position: absolute;
+  padding: 3em;
+  transform: rotateY(180deg);
+  width: 80%;
+  background: #222;
+}
+
+.back .title {
+  margin-bottom: 8px;
+}
+
+.input-box {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+input,
+textarea {
+  color: #fff;
+  width: 80%;
+  border: none;
+  padding: 4px 0;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: none;
+  margin-top: 20px;
+  resize: none;
+}
+
+label {
+  position: absolute;
+  font-size: 13px;
+  left: 10%;
+  top: 24px;
+  pointer-events: none;
+  transition: all 0.2s;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+  border-bottom: 2px solid #00ff5a;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label,
+.input-box textarea:focus ~ label,
+.input-box textarea:valid ~ label {
+  top: 10px;
+  font-size: 10px;
+  color: #00ff5a;
+}
+
+.send {
+  padding: 8px 24px;
+  margin-top: 1em;
+  border: 2px solid #00ff5a;
+  border-radius: 20px;
+  background: transparent;
+  color: #00ff5a;
+  cursor: pointer;
+}
+
+.send:focus,
+.send:active {
+  background: #00ff5a;
+  color: #2b2b2b;
+  outline: none;
+}
